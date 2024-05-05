@@ -1,0 +1,140 @@
+
+main,aside{
+    box-shadow: 0 .4rem .8rem -.1rem rgba(0,32,128,.1),0 0 0 1px #f0f2f7;
+    padding: 15px;
+}
+.space{
+    min-height: calc(100vh - 5em);
+}
+header a img{
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+    text-align: center;
+}
+header h1{
+    /*letter-spacing:0.1em;*/
+    color:#273562;
+    /*text-shadow: 3px 3px 1px gray;*/
+}
+input[required]:valid {
+    background-color: aliceblue;
+}
+input[required]:invalid{
+    background-color:lightgrey; 
+}
+.req::after{
+    content: " (erforderliche Eingabe)";
+}
+nav ul{
+    overflow: hidden;
+    background-color: #273149;
+}
+nav li{
+    list-style: none;
+    float: left;
+}
+nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover{
+    background: #324b64;
+}
+table{
+    border: 2px solid;
+    border-radius: 5px;
+    border-color:black; 
+    padding: 10px;
+    margin: 5px;
+    width:100%;
+}
+#table thead tr:first-child{
+    color: white;
+    background-color:#273149;
+}
+#table thead tr+tr{
+    color: black;
+    background-color:whitesmoke;
+}
+#table tbody tr:nth-child(even){
+    background-color:aliceblue; 
+}
+.email::before{
+    content: "✉️";
+}
+fieldset{
+    /*margin:auto;*/
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    font-style: italic;
+}
+fieldset legend{
+    font-style: italic; 
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color:#273149; 
+    box-shadow: 4px 4px 4px 4px grey;
+    height: 15px;
+}
+aside{
+    padding: 3px;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    margin-left: 1em; 
+    /*border: 2px dashed;*/
+    /*background-color: whitesmoke;*/
+    /*border-radius: 5px;*/
+}
+form label{
+    /*display: block;*/
+    margin: 5px;
+}
+form input{
+    padding: 8px;
+    margin:5px;
+    border-radius:5px;
+    border: 1px solid #333; 
+}
+form input[type='submit']{
+    font-size: 16px;
+    background-color: whitesmoke;
+    color: black;
+    padding:5px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+#info{
+    border-left: 2px solid ;
+    padding: 10px; 
+    margin-bottom:10px; 
+}
+#beschreibung{
+    border-left: 2px solid ;
+    margin-bottom: 20px;
+    padding: 5px; 
+}
+header a{
+    margin-top: 20px;
+    margin-right: 15px;
+}
+aside{
+    padding: 2em;
+}
+
+footer{
+    background-color: #273149;
+    color: white;
+    height: 5em;
+}
+

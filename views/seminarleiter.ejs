@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Anwendung</title>
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <%- include("header") %>
+    <main>
+        <div class="container">
+            <div id="info">
+                <h2>Seminarleiter</h2>
+                <p>Name: Herr Müller</p>
+                <div class="email">E-mail: <a href="mailto:müller@fh-dortmund.de">müller@fh-dortmund.de </a></div>
+                <p>Tel: 010500959595</p>
+            </div>
+            <figure id="bildprof">
+                <img src="./img/professor.png" alt="Professor Müller Bild">
+                <figcaption>Bild Professor Müller</figcaption>
+            </figure>
+        </div>
+    </main>
+    <%- include("aside") %>
+    <%- include("footer") %>
+</body>
+
+</html>

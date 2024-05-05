@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Anwendung</title>
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <%- include("header") %>
+    <main>
+        <form action="https://labs.inf.fh-dortmund.de/seminarApp/testCreateSeminar.php" method="POST">
+            <div>
+                <fieldset>
+                    <legend>Seminar anlegen</legend>
+                    <div class="lblip">
+                        <label for="semtitle">Seminartitel:</label>
+                        <div class="req">
+                            <input type="text" name="semtitle" id="semtitle" placeholder="z.B. Web Technologien"
+                                maxlength="20" pattern="[A-Z]{1}[a-z]*" autofocus required>
+                        </div>
+                    </div>
+                    <div class="lblip">
+                        <label for="semlead">Seminarleiter:</label>
+                        <select name="semlead" id="semlead">
+                            <option value="müller">Müller</option>
+                            <option value="koll">Koll</option>
+                            <option value="rettinger">Rettinger</option>
+                            <option value="stark">Stark</option>
+                        </select>
+                    </div>
+                    <div class="lblip">
+                        <label for="semdate">Datum:</label>
+                        <div class="req">
+                            <input type="date" name="semdate" id="semdate" required>
+                        </div>
+                    </div>
+                    <div class="lblip">
+                        <label for="semstart">Startzeit:</label>
+                        <div class="req">
+                            <input type="time" name="semstart" id="semstart" min="08:00" max="16:00" required>
+                        </div>
+                    </div>
+                    <div class="lblip">
+                        <label for="semend">Endzeit:</label>
+                        <div class="req">
+                            <input type="time" name="semend" id="semend" min="10:00" max="16:00" required>
+                        </div>
+                    </div>
+                    <div class="lblip">
+                        <label for="semtutors">Tutoren:</label>
+                        <div class="req">
+                            <input type="text" name="semtutors" id="semtutors"
+                                pattern="[a-z]{2,4}[0-9]{1}(,{1}[a-z]{2,4}[0-9]{1})*" required>
+                        </div>
+                    </div>
+                    <div class="lblip">
+                        <label for="semseats">Verfügbare Plätze:</label>
+                        <div class="req">
+                            <input type="number" name="semseats" id="semseats" min="0" max="100" required>
+                        </div>
+                    </div>
+                    <div class="lblip">
+                        <input type="submit" name="submit" value="anlegen" id="formsubmit">
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </main>
+
+    <%- include("aside") %>
+    <%- include("footer") %>
+
+</body>
+
+</html>

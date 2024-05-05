@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Anwendung</title>
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="space">
+        <%- include("header") %>
+        <div class="container">
+            <main>
+                <section>
+                    <h3>Hauptinhalt</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam quas nobis unde similique.
+                        Atque in
+                        deleniti, molestiae ad totam aspernatur?
+                    </p>
+                </section>
+                <section>
+                    <div>
+                        <form action="https://labs.inf.fh-dortmund.de/seminarApp/testSearch.php" method="GET">
+                            <fieldset>
+                                <legend>Suche</legend>
+                                <div>
+                                    <div class="lblip"><label for="semtitle">Seminar suchen:</label>
+                                        <div class="req">
+                                            <input list="seminare" type="text" name="semtitle" id="semtitle"
+                                                placeholder="was möchten sie suchen?" maxlength="20" required>
+                                            <datalist id="seminare">
+                                                <option value="Web Technologien">
+                                                <option value="Programmierkurs">
+                                                <option value="Einführung Programmieren">
+                                                <option value="Buchführung">
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="suchen" name="finden" id="submit">
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <table id="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">
+                                        <strong>Seminare</strong>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Titel</strong>
+                                    </td>
+                                    <td>
+                                        <strong>Datum</strong>
+                                    </td>
+                                    <td>
+                                        <strong>Ort</strong>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% seminare.forEach(sem => {%>
+                                <tr>
+                                    <td><a href="seminardetail"><%=sem.titel%> </a></td>
+                                    <td> <%=sem.startZeit.toLocaleDateString()%> </td>
+                                    <td> <%=sem.ort%> </td>
+                                </tr>
+
+                                <%});%>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+            <%- include("aside") %>
+        </div>
+    </div>
+    <%- include("footer") %>
+    <!--<script src="js/script.js"></script>-->
+</body>
+
+</html>

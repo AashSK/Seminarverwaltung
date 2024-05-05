@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Anwendung</title>
+    <link rel="stylesheet" href="../css/flexbox.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="space">
+        <%- include("header") %>
+        <div class="container">
+            <main>
+                <section id="info">
+                    <div>
+                        <h2>Information zum Seminar</h2>
+                        <h3>Titel des Seminars</h3>
+                        <p>Seminarleiter: Herr Müller</p>
+                        <p>Uhrzeit: 12:00-14:00</p>
+                        <p>Freie plätze: 10</p>
+                        <p>Plätze Gesamt: 40</p>
+                    </div>
+                </section>
+                <section id="beschreibung">
+                    <div>
+                        <h3>Beschreibung des Seminars</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, nisi minus. Consequatur
+                            facilis
+                            voluptate labore?
+                        </p>
+                    </div>
+                </section>
+            </main>
+            <%- include("aside") %>
+        </div>
+    </div>
+    <%- include("footer") %>
+</body>
+
+</html>
